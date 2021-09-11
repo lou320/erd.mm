@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css" integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk" crossorigin="anonymous">
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="bootstrap/css/bootstrap.css">
+    
+<head>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+
+</head>
+<body>
+      <h2 id="heading">Louis</h2>
+        <div class="container">
+          <input type="text" id="myInput" onkeyup="myFunction()" placeholder="Search for names.." title="Type in a name">
+        </div>
+  <hr>
+<ul id="myUL">
+    <li><a href="angelbeats.html">Angel Beats!</a></li>
+    <li><a href="anohana.html">Anohana</a></li>
+    <li><a href="Beyond the Boundary.html">Beyond the Boundary</a></li>
+    <li><a href="Charlotte.html">Charlotte</a></li>
+    <li><a href="Darling.html">Darling in the Franxx</a></li>
+    <li><a href="forest.html">Hotarubi no Mori e</a></li>
+    <li><a href="Fruits Basket.html">Fruits Basket</a></li>
+    <li><a href="helloworld.html">Hello World</a></li>
+    <li><a href="iwantto.html">I Want to Eat Your Pancreas</a></li>
+    <li><a href="myneighbour.html">My Neighbor Totoro</a></li>
+    <li><a href="plastic memories.html">Plastic Memories</a></li>
+    <li><a href="School Days.html">School Days</a></li>
+    <li><a href="silentvoi.html">A Silent Voice</a></li>
+    <li><a href="Steins;Gate.html">Steins;Gate</a></li>
+    <li><a href="The Girl Who Leapt Through Time.html">The Girl Who Leapt Through Time</a></li>
+    <li><a href="Violet Evergarden.html">Violet Evergarden</a></li>
+    <li><a href="wear.html">Weathering with You</a></li>
+    <li><a href="yourlie.html">Your Lie in April</a></li>
+    <li><a href="yourname.html">Your Name</a></li>
+    <li><a href="firework.html">Fireworks</a></li>
+    <li><a href="poyno.html">Ponyo</a></li>
+    <li><a href="Grave of the Fireflies.html">Grave of the Fireflies</a></li>
+    <li><a href="bunnygirl.html">Rascal Does Not Dream of a Dreaming Girl</a></li>
+    <li><a href="Kakegurui .html">Kakegurui Compulsive Gambler</a></li>
+    <li><a href=""></a></li>
+    
+</ul>
+
+<script>
+function myFunction() {
+    var input, filter, ul, li, a, i, txtValue;
+    input = document.getElementById("myInput");
+    filter = input.value.toUpperCase();
+    ul = document.getElementById("myUL");
+    li = ul.getElementsByTagName("li");
+    for (i = 0; i < li.length; i++) {
+        a = li[i].getElementsByTagName("a")[0];
+        txtValue = a.textContent || a.innerText;
+        if (txtValue.toUpperCase().indexOf(filter) > -1) {
+            li[i].style.display = "";
+        } else {
+            li[i].style.display = "none";
+        }
+    }
+}
+</script>
+<p class="copyright">Copyright @ 2020 Name . Designed by Louis</p>
+</body>
+</html>
