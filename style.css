@@ -1,5 +1,5 @@
 .heading h3{
-    color: ;
+
     border-bottom: 2px solid rgb(2, 2, 61);
     float: left;
     position: relative;
@@ -51,7 +51,7 @@
   font-size: 16px;
   padding: 8px 10px;
   border: 1px solid rgb(114, 122,122);
-  margin-bottom: ;
+  /* margin-bottom: ; */
   margin-top: 10px;
 
 }
