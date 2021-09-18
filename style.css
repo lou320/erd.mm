@@ -1,12 +1,11 @@
 .heading h3{
-
-    border-bottom: 2px solid rgb(2, 2, 61);
-    float: left;
-    position: relative;
-    left: 50%;
-    transform: translate(-50%);
-    font-size: 40px;
-    font-family: "Times New Roman", Times, serif;
+  border-bottom: 2px solid rgb(2, 2, 61);
+  float: left;
+  position: relative;
+  left: 50%;
+  transform: translate(-50%);
+  font-size: 40px;
+  font-family: "Times New Roman", Times, serif;
 }
 .heap{
   text-align: center;
@@ -68,7 +67,7 @@
   padding: 12px;
   text-decoration: none;
   font-size: 18px;
- color: cadetblue;
+  color: cadetblue;
   display: block;
 }
 
