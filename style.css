@@ -1,0 +1,73 @@
+@media (min-width : 992px) {
+    .offcanvas {
+      visibility      : visible;
+      position        : relative;
+      background      : none;
+      border          : none;
+      justify-content : end;
+      color           : black;
+    }
+  }
+  
+  @media (max-width : 992px) {
+    .offcanvas {
+      width : 250px !important;
+    }
+    .offcanvas-start-lg {
+      top          : 0;
+      left         : 0;
+      border-right : 1px solid rgba(0, 0, 0, .2);
+      transform    : translateX(-100%);
+    }
+  }
+  
+  .navbar-nav li a {
+    color: black !important;
+  }
+
+.seccon{
+  margin-top: 66px;
+}
+.books{
+  width: 100%;
+  border-radius: 3px;
+  border-color: aliceblue;
+}
+
+body{
+  background-color: white;
+}
+
+
+.dark-t{
+  color: black;
+}
+.nav-link{
+  color: red;
+}
+.offcanvas-header{
+  
+}
+.navbar:hover {
+  background-color: transparent;
+  color: #999999;
+}
+
+hr{
+  border: 0;
+  height: 1px;
+  background: #333;
+  background-image: linear-gradient(to right, #ccc, #333, #ccc);
+}
+.soungDiv1{
+  width: 50%;
+
+  
+}
+.soungDiv2{
+  width: 50%;
+  
+}
+.imageDiv img{
+  width: 100%;
+}
