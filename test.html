@@ -4,17 +4,61 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
     <link rel="stylesheet" href="bootstrap-5.1.1-dist/css/bootstrap.min.css">
     <script src="bootstrap-5.1.1-dist/js/bootstrap.min.js"></script>
     <link rel="stylesheet" href="style.css">
     <title>Document</title>
 </head>
+
 <body>
-<div style="background-color: black; ">
-    <div class="row" style="display: flex;">
-        <div class="col-5" style="background-color: blue; display: inline-block; width: 49%;">cool</div>
-        <div class="col-5" style="background-color: rebeccapurple; display: inline-block; width: 49%;">cool</div>
+  <input id="filter" type="text">
+
+  <div id="results" >
+    <div class="row">
+      <div style="display: inline-block;" class="col-6 results">
+        <img class="books" src="https://images-na.ssl-images-amazon.com/images/I/51MS8ClLwLL._SX258_BO1,204,203,200_.jpg" alt="">
+        <h5>Physics IGCSE</h5>
+      </div>
+      <div style="display: inline-block;" class="col-6">
+        <img class="books" src="https://images-na.ssl-images-amazon.com/images/I/51MS8ClLwLL._SX258_BO1,204,203,200_.jpg" alt="">
+        <h5>Physics </h5>
+      </div>
     </div>
-</div>
+  </div>
+
+  <!-- <div id="results">
+    <div class="results">
+      <p>1</p>
+      <p>Toyota</p>
+      <p>C 200</p>
+      <p>114</p>
+    </div>
+  </div> -->
 </body>
 </html>
+<script>
+$("#filter").keyup(function() {
+
+// Retrieve the input field text and reset the count to zero
+var filter = $(this).val(),
+  count = 0;
+
+// Loop through the comment list
+$('#results div').each(function() {
+
+
+  // If the list item does not contain the text phrase fade it out
+  if ($(this).text().search(new RegExp(filter, "i")) < 0) {
+    $(this).hide();  // MY CHANGE
+
+    // Show the list item if the phrase matches and increase the count by 1
+  } else {
+    $(this).show(); // MY CHANGE
+    count++;
+  }
+
+});
+
+});
+</script>
