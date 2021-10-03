@@ -1,16 +1,18 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta http-equiv="X-UA-Compatible" content="IE=edge">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <link rel="stylesheet" href="/bootstrap-5.1.1-dist/css/bootstrap.min.css">
-  <script src="/bootstrap-5.1.1-dist/js/bootstrap.min.js"></script>
-  <link rel="stylesheet" href="/style.css">
-  <script src="https://kit.fontawesome.com/f06b193236.js" crossorigin="anonymous"></script>
-  <title>ERDMM</title>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../bootstrap-5.1.1-dist/css/bootstrap.min.css">
+    <script src="../bootstrap-5.1.1-dist/js/bootstrap.min.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <link rel="stylesheet" href="../style.css">
+    <script src="https://kit.fontawesome.com/f06b193236.js" crossorigin="anonymous"></script>
+    <title>ERDMM</title>
 </head>
 <body>
+
   <div class="container-xl">
     <nav class="navbar fixed-top navbar-expand-lg navbar-dark bg-white">
       <div class="container">
@@ -92,5 +94,69 @@
       </div>
     </nav>
   </div>
+
+<div class="container-xl">
+  <input class="seccon border border-dark rounded" style="width: 100%;" type="search" name="search" id="">
+</div>
+
+<div id="results" class="container-xl" style="margin-top: 5px;">
+  <div class="row">
+    <div style="display: inline-block;" class="col-6 results">
+      <img class="books" src="https://images-na.ssl-images-amazon.com/images/I/51MS8ClLwLL._SX258_BO1,204,203,200_.jpg" alt="">
+      <h5>Physics IGCSE 1</h5>
+    </div>
+    <div style="display: inline-block;" class="col-6 results">
+      <img class="books" src="https://images-na.ssl-images-amazon.com/images/I/51MS8ClLwLL._SX258_BO1,204,203,200_.jpg" alt="">
+      <h5>Physics IGCSE 2</h5>
+    </div>
+  </div>
+  <div class="row">
+    <div style="display: inline-block;" class="col-6 results">
+      <img class="books" src="https://images-na.ssl-images-amazon.com/images/I/51MS8ClLwLL._SX258_BO1,204,203,200_.jpg" alt="">
+      <h5>Physics IGCSE 3</h5>
+    </div>
+    <div style="display: inline-block;" class="col-6 results">
+      <img class="books" src="https://images-na.ssl-images-amazon.com/images/I/51MS8ClLwLL._SX258_BO1,204,203,200_.jpg" alt="">
+      <h5>Physics IGCSE</h5>
+    </div>
+  </div>
+  <div class="row">
+    <div style="display: inline-block;" class="col-6 results">
+      <img class="books" src="https://images-na.ssl-images-amazon.com/images/I/51MS8ClLwLL._SX258_BO1,204,203,200_.jpg" alt="">
+      <h5>Physics IGCSE 5</h5>
+    </div>
+    <div style="display: inline-block;" class="col-6 results">
+      <img class="books" src="https://images-na.ssl-images-amazon.com/images/I/51MS8ClLwLL._SX258_BO1,204,203,200_.jpg" alt="">
+      <h5>Physics IGCSE 6</h5>
+    </div>
+  </div>
+
+</div>
+
 </body>
 </html>
+<script>
+  $("#filter").keyup(function() {
+  
+  // Retrieve the input field text and reset the count to zero
+  var filter = $(this).val(),
+    count = 0;
+  
+  // Loop through the comment list
+  $('#results div').each(function() {
+  
+  
+    // If the list item does not contain the text phrase fade it out
+    if ($(this).text().search(new RegExp(filter, "i")) < 0) {
+      $(this).hide();  // MY CHANGE
+  
+      // Show the list item if the phrase matches and increase the count by 1
+    } else {
+      $(this).show(); // MY CHANGE
+      count++;
+    }
+  
+  });
+  
+  });
+  </script>
